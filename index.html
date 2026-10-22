@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Computing & Simulation Architecture Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --border-color: #30363d;
+            --card-bg: #161b22;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        h1 { color: #f0f6fc; margin-bottom: 0.5rem; font-size: 2rem; }
+        .subtitle { color: #8b949e; font-size: 1.1rem; }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover { border-color: var(--accent-color); }
+        .card-title {
+            color: #f0f6fc;
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #21262d;
+            color: var(--accent-color);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.5rem;
+            border-radius: 2rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+        }
+        .card-body { color: #8b949e; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .card-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .card-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Scientific Computing & Quantum Software Portfolio</h1>
+            <p class="subtitle">B.Sc. Computer Science • Computational Simulation Pipelines & Low-Level Hardware Optimization</p>
+        </header>
+
+        <main class="grid">
+            <!-- Project 1: QEC Simulator -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">QEC Simulation Pipeline</h2>
+                    <span class="tag">Python / CUDA-Q Core Architecture</span>
+                    <p class="card-body">Modular error insertion, code geometry layout generation, and decoding execution engine. Built using object-oriented Python modules with internal testing gates, decoupled to easily drop in custom noise profiles and hardware decoders.</p>
+                </div>
+                <a href="https://github.io" class="card-link">View Documentation & Code →</a>
+            </div>
+
+            <!-- Project 2: Monte Carlo -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">High-Performance Monte Carlo Simulations</h2>
+                    <span class="tag">Python / C Optimization</span>
+                    <p class="card-body">Statistical simulation engines designed for high-throughput processing. Showcases custom performance scaling strategies, algorithmic parallelization, and data visualization arrays.</p>
+                </div>
+                <a href="https://github.com" class="card-link">View Code Repository →</a>
+            </div>
+
+            <!-- Project 3: VQE -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">Variational Quantum Eigensolver (VQE)</h2>
+                    <span class="tag">NISQ Algorithms</span>
+                    <p class="card-body">Implementation of variational optimization loops over noisy quantum simulator models, measuring grounding state behaviors and mapping parameter space execution topologies.</p>
+                </div>
+                <a href="https://github.com" class="card-link">View Code Repository →</a>
+            </div>
+
+            <!-- Project 4: QAOA -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">Quantum Approximate Optimization Algorithm</h2>
+                    <span class="tag">Combinatorial Optimization</span>
+                    <p class="card-body">Combinatorial graph problem optimization engines testing state preparation configurations against classical cost functions across parameterized gate modules.</p>
+                </div>
+                <a href="https://github.com" class="card-link">View Code Repository →</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
