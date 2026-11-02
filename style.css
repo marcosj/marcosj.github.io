@@ -1,0 +1,215 @@
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --text-color: #c9d1d9;
+    --text-muted: #8b949e;
+    --accent-color: #58a6ff;
+    --accent-glow: rgba(88, 166, 255, 0.15);
+    --border-color: #30363d;
+    --font-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Top Navigation Bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(13, 17, 23, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 2rem;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: #f0f6fc;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--accent-color); }
+
+/* Header / Bio Section */
+header {
+    padding: 3rem 0 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+}
+
+h1 { color: #f0f6fc; margin-bottom: 0.5rem; font-size: 2.2rem; }
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-family: var(--font-mono);
+    margin-bottom: 1.5rem;
+}
+
+.bio-text { color: var(--text-color); font-size: 1rem; max-width: 800px; }
+
+/* Section Headings */
+.section-title {
+    color: #f0f6fc;
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Pure CSS Tab System */
+.tabs-container {
+    margin-bottom: 3rem;
+}
+
+.tab-input {
+    display: none;
+}
+
+.tab-nav {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.tab-label {
+    padding: 0.75rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.tab-label:hover {
+    color: var(--text-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+/* Tab Switching Logic */
+#tab-quantum-toggle:checked ~ .tab-nav label[for="tab-quantum-toggle"],
+#tab-classical-toggle:checked ~ .tab-nav label[for="tab-classical-toggle"],
+#tab-ml-toggle:checked ~ .tab-nav label[for="tab-ml-toggle"] {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+    background-color: rgba(88, 166, 255, 0.05);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+#tab-quantum-toggle:checked ~ .panels #quantum-panel,
+#tab-classical-toggle:checked ~ .panels #classical-panel,
+#tab-ml-toggle:checked ~ .panels #ml-panel {
+    display: grid;
+}
+
+/* Grids & Cards */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.card-title { color: #f0f6fc; font-size: 1.2rem; margin-top: 0; margin-bottom: 0.5rem; }
+
+.tag {
+    display: inline-block;
+    background-color: #21262d;
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.card-body { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+
+.card-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
+}
+
+.card-link:hover { text-decoration: underline; }
+
+/* Credentials / Education List */
+.certs-list { list-style: none; padding: 0; }
+.certs-list li {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+.certs-list span { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.85rem; }

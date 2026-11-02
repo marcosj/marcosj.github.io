@@ -3,125 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Computing & Simulation Architecture Portfolio</title>
-    <style>
-        :root {
-            --bg-color: #0d1117;
-            --text-color: #c9d1d9;
-            --accent-color: #58a6ff;
-            --border-color: #30363d;
-            --card-bg: #161b22;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 2rem;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        header {
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        h1 { color: #f0f6fc; margin-bottom: 0.5rem; font-size: 2rem; }
-        .subtitle { color: #8b949e; font-size: 1.1rem; }
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .card:hover { border-color: var(--accent-color); }
-        .card-title {
-            color: #f0f6fc;
-            font-size: 1.25rem;
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-        }
-        .tag {
-            display: inline-block;
-            background-color: #21262d;
-            color: var(--accent-color);
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 0.2rem 0.5rem;
-            border-radius: 2rem;
-            margin-bottom: 1rem;
-            border: 1px solid var(--border-color);
-        }
-        .card-body { color: #8b949e; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .card-link {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-        .card-link:hover { text-decoration: underline; }
-    </style>
+    <title>Marcos Jiménez Mata — Quantum Computing & Systems Architecture</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" class="nav-brand">marcosj.dev</a>
+        <ul class="nav-links">
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
-        <header>
-            <h1>Scientific Computing & Quantum Software Portfolio</h1>
-            <p class="subtitle">B.Sc. Computer Science • Computational Simulation Pipelines & Low-Level Hardware Optimization</p>
+        
+        <!-- Bio Section -->
+        <header id="bio">
+            <h1>Marcos Jiménez Mata</h1>
+            <p class="subtitle">Physicist & Computer Scientist • Quantum Error Correction & Systems Architecture</p>
+            <p class="bio-text">
+                Specializing in quantum error correction simulation (surface and Bacon-Shor codes tailored to noisy quantum dot architectures), scientific computing, and high-performance classical pipelines. Active researcher in low-level simulation engines, combinatorial optimization, and quantum algorithms.
+            </p>
         </header>
 
-        <main class="grid">
-            <!-- Project 1: QEC Simulator -->
-            <div class="card">
-                <div>
-                    <h2 class="card-title">QEC Simulation Pipeline</h2>
-                    <span class="tag">Python / CUDA-Q Core Architecture</span>
-                    <p class="card-body">Modular error insertion, code geometry layout generation, and decoding execution engine. Built using object-oriented Python modules with internal testing gates, decoupled to easily drop in custom noise profiles and hardware decoders.</p>
-                </div>
-                <a href="https://github.io" class="card-link">View Documentation & Code →</a>
+        <!-- Projects Section with Pure CSS Tabs -->
+        <section id="projects" class="tabs-container">
+            <h2 class="section-title">Technical Projects</h2>
+
+            <!-- Hidden Radio Inputs for Pure CSS Tabs -->
+            <input type="radio" id="tab-quantum-toggle" name="project-tabs" class="tab-input" checked>
+            <input type="radio" id="tab-classical-toggle" name="project-tabs" class="tab-input">
+            <input type="radio" id="tab-ml-toggle" name="project-tabs" class="tab-input">
+
+            <!-- Tab Navigation Labels -->
+            <div class="tab-nav">
+                <label for="tab-quantum-toggle" class="tab-label">Quantum Computing & QEC</label>
+                <label for="tab-classical-toggle" class="tab-label">Classical & Systems</label>
+                <label for="tab-ml-toggle" class="tab-label">ML & Vision</label>
             </div>
 
-            <!-- Project 2: Monte Carlo -->
-            <div class="card">
-                <div>
-                    <h2 class="card-title">High-Performance Monte Carlo Simulations</h2>
-                    <span class="tag">Python / C Optimization</span>
-                    <p class="card-body">Statistical simulation engines designed for high-throughput processing. Showcases custom performance scaling strategies, algorithmic parallelization, and data visualization arrays.</p>
-                </div>
-                <a href="https://github.com" class="card-link">View Code Repository →</a>
-            </div>
+            <!-- Tab Panels Container -->
+            <div class="panels">
 
-            <!-- Project 3: VQE -->
-            <div class="card">
-                <div>
-                    <h2 class="card-title">Variational Quantum Eigensolver (VQE)</h2>
-                    <span class="tag">NISQ Algorithms</span>
-                    <p class="card-body">Implementation of variational optimization loops over noisy quantum simulator models, measuring grounding state behaviors and mapping parameter space execution topologies.</p>
-                </div>
-                <a href="https://github.com" class="card-link">View Code Repository →</a>
-            </div>
+                <!-- Quantum Panel (Default) -->
+                <div id="quantum-panel" class="tab-content grid">
+                    <div class="card">
+                        <div>
+                            <h3 class="card-title">Biased Noise Tailored QEC Codes</h3>
+                            <span class="tag">Stim / PyMatching / Quantum Dots</span>
+                            <p class="card-body">Advanced simulation pipeline modeling surface and Bacon-Shor error correction codes under realistic biased noise environments characteristic of semiconductor quantum dot architectures.</p>
+                        </div>
+                        <a href="https://github.com/marcosj" class="card-link">View Repository →</a>
+                    </div>
 
-            <!-- Project 4: QAOA -->
-            <div class="card">
-                <div>
-                    <h2 class="card-title">Quantum Approximate Optimization Algorithm</h2>
-                    <span class="tag">Combinatorial Optimization</span>
-                    <p class="card-body">Combinatorial graph problem optimization engines testing state preparation configurations against classical cost functions across parameterized gate modules.</p>
+                    <div class="card">
+                        <div>
+                            <h3 class="card-title">Hybrid QAOA Portfolio Optimization</h3>
+                            <span class="tag">Qiskit / Python / Combinatorial</span>
+                            <p class="card-body">Combinatorial optimization pipeline leveraging QAOA to solve multi-asset portfolio assignment problems across parameterized variational gate circuits.</p>
+                        </div>
+                        <a href="https://github.com/marcosj" class="card-link">View Repository →</a>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 class="card-title">Silicon Spin Qubit QEC Survey</h3>
+                            <span class="tag">Architecture Analysis</span>
+                            <p class="card-body">Comprehensive technical survey and architectural mapping evaluating fault-tolerant thresholds and syndrome extraction workflows for silicon spin qubit arrays.</p>
+                        </div>
+                        <a href="https://github.com/marcosj" class="card-link">View Repository →</a>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 class="card-title">Quantum Graph Algorithms & Random Walks</h3>
+                            <span class="tag">NetworkX / Qiskit</span>
+                            <p class="card-body">Simulation frameworks exploring quantum graph traversal algorithms and Quantum Galton board random walk behaviors over network topologies.</p>
+                        </div>
+                        <a href="https://github.com/marcosj" class="card-link">View Repository →</a>
+                    </div>
                 </div>
-                <a href="https://github.com" class="card-link">View Code Repository →</a>
+
+                <!-- Classical & Systems Panel -->
+                <div id="classical-panel" class="tab-content grid">
+                    <div class="card">
+                        <div>
+                            <h3 class="card-title">Monte Carlo Poisson / Laplace Solver</h3>
+                            <span class="tag">NumPy / C / High-Performance</span>
+                            <p class="card-body">Statistical PDE solvers designed for high-throughput parallel processing, optimized for boundary value problems in electrostatics and transport phenomena.</p>
+                        </div>
+                        <a href="https://github.com/marcosj" class="card-link">View Repository →</a>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 class="card-title">Logic Minimizer & Physics Utilities</h3>
+                            <span class="tag">Quine-McCluskey / Petrick</span>
+                            <p class="card-body">Low-level logic optimization tool using Quine-McCluskey and Petrick's method, alongside numerical scripts calculating ray incidence across material interfaces.</p>
+                        </div>
+                        <a href="https://github.com/marcosj" class="card-link">View Repository →</a>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 class="card-title">Silicon / Mineclone Modding & Utilities</h3>
+                            <span class="tag">C / Python / Low-Level</span>
+                            <p class="card-body">Custom systems tools and game optimization scripts, including custom rendering tweaks and utility engines.</p>
+                        </div>
+                        <a href="https://github.com/marcosj" class="card-link">View Repository →</a>
+                    </div>
+                </div>
+
+                <!-- ML & Vision Panel -->
+                <div id="ml-panel" class="tab-content grid">
+                    <div class="card">
+                        <div>
+                            <h3 class="card-title">Multiple Vehicle Tracker (MOT)</h3>
+                            <span class="tag">YOLO / SORT / OpenCV</span>
+                            <p class="card-body">Multi-object tracking pipeline combining YOLO object detection with SORT tracking algorithms, evaluated against standard MOT performance metrics.</p>
+                        </div>
+                        <a href="https://github.com/marcosj" class="card-link">View Repository →</a>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 class="card-title">Video Stitching Pipeline</h3>
+                            <span class="tag">OpenCV / Feature Matching</span>
+                            <p class="card-body">Computer vision pipeline for panoramic video frame alignment, feature homography estimation, and multi-frame stitching.</p>
+                        </div>
+                        <a href="https://github.com/marcosj" class="card-link">View Repository →</a>
+                    </div>
+                </div>
+
             </div>
-        </main>
+        </section>
+
+        <!-- Education & Credentials Section -->
+        <section id="education">
+            <h2 class="section-title">Education & Credentials</h2>
+            <ul class="certs-list">
+                <li>
+                    Licentiate Degree in Electrical Engineering (Thesis Phase)
+                    <span>Universidad de Costa Rica</span>
+                </li>
+                <li>
+                    B.Sc. in Computer Science
+                    <span>Universidad de Costa Rica</span>
+                </li>
+                <li>
+                    B.Sc. in Electrical Engineering
+                    <span>Universidad de Costa Rica</span>
+                </li>
+                <li>
+                    IBM Certified Quantum Developer (Qiskit v2.X)
+                    <span>IBM Quantum • Oct 2026</span>
+                </li>
+            </ul>
+        </section>
+
     </div>
+
 </body>
 </html>
