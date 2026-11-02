@@ -137,12 +137,15 @@ h1 { color: #f0f6fc; margin-bottom: 0.5rem; font-size: 2.2rem; }
     background-color: rgba(88, 166, 255, 0.05);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    display: grid;
 }
 
 #tab-quantum-toggle:checked ~ .panels #quantum-panel,
 #tab-classical-toggle:checked ~ .panels #classical-panel,
 #tab-ml-toggle:checked ~ .panels #ml-panel {
     display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
 
 /* Grids & Cards */
@@ -153,7 +156,11 @@ h1 { color: #f0f6fc; margin-bottom: 0.5rem; font-size: 2.2rem; }
 }
 
 @media (min-width: 768px) {
-    .grid { grid-template-columns: 1fr 1fr; }
+    #tab-quantum-toggle:checked ~ .panels #quantum-panel,
+    #tab-classical-toggle:checked ~ .panels #classical-panel,
+    #tab-ml-toggle:checked ~ .panels #ml-panel {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .card {
@@ -213,3 +220,84 @@ h1 { color: #f0f6fc; margin-bottom: 0.5rem; font-size: 2.2rem; }
     font-size: 0.95rem;
 }
 .certs-list span { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.85rem; }
+
+/* Credential / Badge Grid Styling */
+.badge-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .badge-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.credential-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: border-color 0.2s;
+}
+
+.credential-item:hover {
+    border-color: var(--accent-color);
+}
+
+.credential-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25krem;
+}
+
+.credential-title {
+    color: #f0f6fc;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.credential-title:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.credential-issuer {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.credential-badge-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Credential Tab Label Highlighting */
+#cred-univ:checked ~ .tab-nav label[for="cred-univ"],
+#cred-quantum:checked ~ .tab-nav label[for="cred-quantum"],
+#cred-ai:checked ~ .tab-nav label[for="cred-ai"],
+#cred-ds:checked ~ .tab-nav label[for="cred-ds"],
+#cred-misc:checked ~ .tab-nav label[for="cred-misc"] {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+    background-color: rgba(88, 166, 255, 0.05);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+/* Credential Tab Panel Switching */
+#cred-univ:checked ~ .panels #univ-panel,
+#cred-quantum:checked ~ .panels #quantum-panel,
+#cred-ai:checked ~ .panels #ai-panel,
+#cred-ds:checked ~ .panels #ds-panel,
+#cred-misc:checked ~ .panels #misc-panel {
+    display: block !important;
+}
