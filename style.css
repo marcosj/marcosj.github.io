@@ -403,6 +403,8 @@ a.btn:hover, .btn:hover {
 
 .sticky-nav {
     position: sticky;
+    display: flex;
+    justify-content: space-between;
     top: 0;
     z-index: 100;
     background-color: var(--bg-color);
