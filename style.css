@@ -354,8 +354,8 @@ h1 { color: #f0f6fc; margin-bottom: 0.5rem; font-size: 2.2rem; }
 }
 
 .wide-section {
-    max-width: 1300px;
-    width: 100%;
+    max-width: 90%;
+    width: 90%;
     margin: 0 auto;
     padding: 0 1rem;
 }
