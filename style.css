@@ -429,7 +429,7 @@ a.btn:hover, .btn:hover {
     margin-top: 1.5rem;
 }
 
-.pres iframe {
+.pres-iframe {
     width: 75vw;
     height: 75vh;
     border: none;
