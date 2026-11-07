@@ -431,6 +431,7 @@ a.btn:hover, .btn:hover {
 
 .presentation-container iframe {
     width: 100%;
-    height: 600px;
+    height: 75vh;
     border: none;
+    display: block;
 }
