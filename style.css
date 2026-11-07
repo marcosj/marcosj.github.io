@@ -420,7 +420,7 @@ a.btn:hover, .btn:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.presentation-container {
+.pres {
     width: 100%;
     background-color: var(--card-bg, #161b22);
     border: 1px solid var(--border-color, #30363d);
@@ -429,8 +429,8 @@ a.btn:hover, .btn:hover {
     margin-top: 1.5rem;
 }
 
-.presentation-container iframe {
-    width: 100%;
+.pres iframe {
+    width: 75vw;
     height: 75vh;
     border: none;
     display: block;
