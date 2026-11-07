@@ -352,3 +352,60 @@ h1 { color: #f0f6fc; margin-bottom: 0.5rem; font-size: 2.2rem; }
 .btn-back:hover .arrow {
     transform: translateX(-3px);
 }
+
+.wide-section {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #21262d;
+    color: #58a6ff;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: monospace;
+    transition: border-color 0.2s ease;
+}
+
+.btn:hover {
+    border-color: #58a6ff;
+}
+
+.pdf-wide-container {
+    width: 100%;
+    background-color: var(--card-bg, #161b22);
+    border: 1px solid var(--border-color, #30363d);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+.card ul {
+    color: var(--text-muted, #8b949e);
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.card li {
+    margin-bottom: 0.4rem;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--bg-color);
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color, #30363d);
+    backdrop-filter: blur(8px); /* frosted glass effect */
+}
