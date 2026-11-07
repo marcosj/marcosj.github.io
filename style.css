@@ -321,3 +321,34 @@ h1 { color: #f0f6fc; margin-bottom: 0.5rem; font-size: 2.2rem; }
 #cred-misc:checked ~ .panels #misc-panel {
     display: block !important;
 }
+
+/* Back to Home Button */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.9rem;
+    background-color: var(--card-bg, #161b22);
+    color: var(--text-color, #c9d1d9);
+    border: 1px solid var(--border-color, #30363d);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-back .arrow {
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-back:hover {
+    background-color: #21262d;
+    border-color: var(--accent-color, #58a6ff);
+    color: var(--accent-color, #58a6ff);
+}
+
+.btn-back:hover .arrow {
+    transform: translateX(-3px);
+}
