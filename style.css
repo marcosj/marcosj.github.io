@@ -423,13 +423,14 @@ a.btn:hover, .btn:hover {
 }
 
 .pres {
-    width: 90%;
-    height: 90vh;
+    width: 100%;
+    max-width: 1400px;
+    height: 85vh;
     background-color: var(--card-bg, #161b22);
     border: 1px solid var(--border-color, #30363d);
     border-radius: 6px;
     overflow: hidden;
-    margin-top: auto;
+    margin: 1.5rem auto 0 auto;
 }
 
 .pres-iframe {
