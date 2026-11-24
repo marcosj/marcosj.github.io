@@ -380,6 +380,41 @@ a.btn:hover, .btn:hover {
     text-decoration: none !important;
 }
 
+.project-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.btn-details {
+  background-color: #1e293b; /* Dark slate matching your tech theme */
+  color: #f8fafc;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #334155;
+}
+
+.btn-details:hover {
+  background-color: #334155;
+  color: #38bdf8; /* Subtle blue highlight on hover */
+  border-color: #38bdf8;
+  transform: translateY(-1px);
+}
+
+.btn-github {
+  color: #94a3b8; /* Subtle gray icon by default */
+  font-size: 1.4rem;
+  padding: 0.4rem;
+}
+
+.btn-github:hover {
+  color: #38bdf8; /* Glows blue on hover */
+  transform: scale(1.1);
+}
+
 .pdf-wide-container {
     width: 100%;
     background-color: var(--card-bg, #161b22);
@@ -425,7 +460,7 @@ a.btn:hover, .btn:hover {
 .pres {
     width: 100%;
     max-width: 1400px;
-    height: 85vh;
+    height: 82vh;
     background-color: var(--card-bg, #161b22);
     border: 1px solid var(--border-color, #30363d);
     border-radius: 6px;
