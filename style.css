@@ -67,6 +67,17 @@ body {
 
 .nav-links a:hover { color: var(--accent-color); }
 
+.nav-social-group a {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-social-group a:hover {
+  color: #38bdf8;
+  transform: translateY(-1px);
+}
+
 /* Header / Bio Section */
 header {
     padding: 3rem 0 2rem 0;
